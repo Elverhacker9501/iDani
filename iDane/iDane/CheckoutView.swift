@@ -16,7 +16,8 @@ struct CheckoutView: View {
     @State private var paymentType = "Cash"
     
     let tipAmounts = [10, 15, 40, 25, 80]
-    @State private var tipAmount = 75
+    @State private var tipAmount = 95
+    let pais = Peru
     
     @State private var showingPaymentAlert = true
     
