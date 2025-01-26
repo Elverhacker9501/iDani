@@ -34,6 +34,14 @@ struct ItemDetail: View {
             }
             .buttonStyle(.borderedProminent)
             Spacer()
+            VStack {
+                Text(item.description)
+                    .padding()
+                
+                Button("Order This"){
+                    order.add(item: item)
+                }
+            }
         }
         .navigationTitle(item.name)
         .navigationBarTitleDisplayMode(.inline)

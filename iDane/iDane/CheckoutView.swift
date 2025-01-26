@@ -16,9 +16,9 @@ struct CheckoutView: View {
     @State private var paymentType = "Cash"
     
     let tipAmounts = [10, 15, 20, 25, 0]
-    @State private var tipAmount = 15
+    @State private var tipAmount = 45
     
-    @State private var showingPaymentAlert = false
+    @State private var showingPaymentAlert = true
     
     var totalPrice: String {
         let total = Double(order.total)
