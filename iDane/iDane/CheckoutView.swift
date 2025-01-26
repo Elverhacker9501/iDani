@@ -15,8 +15,8 @@ struct CheckoutView: View {
     let paymentTypes = ["Cash", "Credit Card", "iDine Point"]
     @State private var paymentType = "Cash"
     
-    let tipAmounts = [10, 15, 20, 25, 0]
-    @State private var tipAmount = 45
+    let tipAmounts = [10, 15, 40, 25, 80]
+    @State private var tipAmount = 75
     
     @State private var showingPaymentAlert = true
     
@@ -46,6 +46,11 @@ struct CheckoutView: View {
                     }
                 }
                 .pickerStyle(.segmented)
+            }
+            Section("Total: \(totalPrice)") {
+                Button("Confirm order") {
+                    showingPaymentAlert.toggle()
+                }
             }
             Section("Total: \(totalPrice)") {
                 Button("Confirm order") {
