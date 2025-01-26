@@ -24,7 +24,11 @@ struct ItemRow: View {
                 Text("$\(item.price)")
             }
             Spacer()
-            
+            HStack {
+                Text(item.name)
+                    .font(.headline)
+                Text("$\(item.price)")
+            }
             ForEach(item.restrictions, id: \.self){restriction in Text(restriction)
                     .font(.caption)
                     .fontWeight(.black)
