@@ -12,7 +12,8 @@ struct ContentView: View {
     
     var body: some View {
         VStack{
-            Text("Hola Mundo")
+            Text("Peru en crisis")
+            Text("Hackers de todo el mundo")
         }
     }
 }
